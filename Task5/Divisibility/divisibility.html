@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Divisibility</title>
+        <link rel="stylesheet" href="divisibility.css"/>
+       
+        <script>
+        
+            function divisibility(){
+                let numbers=parseInt(document.getElementById('number').value);
+                if(numbers%3===0 && numbers%5===0){
+                    document.getElementById('result').innerHTML="FizzBuzz";
+                } 
+                else if(numbers%3===0){
+                    document.getElementById('result').innerHTML="Buzz";
+
+                }
+               else if(numbers%5===0){
+                  document.getElementById('result').innerHTML="Fizz";
+
+               }
+               else{
+                document.getElementById('result').innerHTML="Enter valid number";
+               }
+           
+
+               } 
+                        
+        </script>
+    
+    </head>
+    <body>
+        <h1>Divisibility check</h1>
+        <div class="main2">
+        <label>Enter the Number:</label>
+        <input type="number" name="number" id="number"/><br><br>
+        <button onclick="divisibility()">Check</button>
+        <p id="result"></p>
+        </div>
+    </body>
+</html>
+]

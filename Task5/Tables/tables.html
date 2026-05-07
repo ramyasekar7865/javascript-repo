@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tables</title>
+        <link rel="stylesheet" href="tables.css"/>
+        <script>
+            function tables(){
+                let num=parseInt(document.getElementById('number').value);
+            
+                let output="";
+                for(let i=1;i<=num;i++){
+                   c=i*num;
+                
+                   output+=i+" * "+ num + " = " + c + " \n";
+
+                }
+               console.log(output);
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>Tables</h1>
+        <label>Enter the number:</label>
+        <input type="number" name="number" id="number"/><br><br><br>
+        <button onclick="tables()">Check</button>
+        <p id="result"></p>
+    </body>
+</html>

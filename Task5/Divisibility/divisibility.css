@@ -1,0 +1,38 @@
+h1{
+   text-align: 200px;;
+    text-decoration: underline;
+    padding:50px;
+
+}
+
+body{
+    background-image: url('https://www.pngmagic.com/webp_images/yellow-background-hd-images.webp');
+    margin-left:500px;
+    margin-top:150px;
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
+}
+label{
+    color:white;
+    background-color: blue;
+}
+
+input{
+    color:black;
+    background-color: rgb(234, 47, 175);
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+button{
+color:black;
+background-color: aqua;
+font-size: 18px;
+font-weight: bold;
+}
+
+button:hover{
+    color:rgb(127, 46, 203);
+    background-color: azure;
+}

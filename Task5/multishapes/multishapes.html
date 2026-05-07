@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MultiShapes</title>
+        <link rel="stylesheet" href="multishapes.css"/>
+        <script>
+            function multishapes(){
+                let length=parseInt(document.getElementById('number1').value);
+                 let width=parseInt(document.getElementById('number2').value);
+                 let sides=parseInt(document.getElementById('number3').value);
+                 let shape= document.getElementById('shape').value;
+                 let operation= document.getElementById('operation').value;
+                 let output="";
+                if(shape==='Rectangle' && operation==='Area') {
+               area=length*width;
+                
+                console.log('area of'+ shape+ 'is'+area )
+                }
+                else if(shape==='Rectangle' && operation==='Perimeter'){
+                 perimeter=(2*(length+width));
+                   console.log("perimeter of"+shape+"is"+perimeter)
+                }
+                
+
+                else if(shape==='Triangle' && operation==='Area') {
+               area=(length*width/2);
+                
+                console.log('area of'+ shape+ 'is'+area )
+                }
+                else if(shape==='Triangle' && operation==='Perimeter'){
+                 perimeter=(length+width+sides);
+                    console.log("perimeter of"+shape+"is"+perimeter)
+                }
+               
+
+                else if(shape==='Square' && operation==='Area') {
+               area=(sides*sides);
+                console.log('area of'+ shape+ 'is'+area )
+                }
+                else if(shape==='Square' && operation==='Perimeter'){
+                 perimeter=(4*sides);
+                   console.log("perimeter of"+shape+"is"+perimeter)
+                }
+                else{
+                    console.log("enter a valid value");
+                }
+               
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>MultiShapes</h1>
+        <div class="main">
+        <label>Enter the length: </label>
+        <input type="number" name="number" id="number1"/><br><br>
+         <label>Enter the width: </label>
+        <input type="number" name="number" id="number2"/><br><br>
+
+         <label>Enter the sides: </label>
+        <input type="number" name="number" id="number3"/><br><br>
+
+
+        <select name="operation" id="operation">
+            <option value="Area">Area</option>
+            <option value="Perimeter">Perimeter</option>
+        </select>
+        <select name="shape" id="shape">
+            <option value="Rectangle">Rectangle</option>
+            <option value="Triangle">Triangle</option>
+            <option value="Square">Square</option>
+        </select><br><br><br>
+       
+        <button onclick="multishapes()">Check</button>
+        <p id="result"></p>
+        </div>
+    </body>
+
+</html>
