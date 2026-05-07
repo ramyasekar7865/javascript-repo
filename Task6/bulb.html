@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Bulb Operation</title>
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding:50px;
+            }
+            h1{
+                color:blue;
+                text-decoration: underline;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            #container{
+                padding:20px;
+                display:inline-block;
+                background-color: red;
+                border-radius:10px;
+                box-shadow:0 0 10px green;
+
+            }
+            #bulbImage{
+                width:200px;
+                height:200px;
+                display:none;
+                margin-top:20px;
+                border-radius:50%;
+
+            }
+            button{
+                padding:10px 20px;
+                font-size: 16px;
+                cursor:pointer;
+                margin:10px;
+                color:blue;
+                background-color: greenyellow;
+            }
+            </style>
+ <script>
+          function selectbulb(bulb) {
+            const image=document.getElementById('bulbImage');
+            const container=document.getElementById('container');
+
+        if (bulb==='on'){
+            image.src="https://5.imimg.com/data5/WL/SG/MY-8835990/10w-gls-light-bulb.jpg";
+            container.style.backgroundColor='yellow';
+
+        }else if (bulb==='off'){
+            image.src="https://media.istockphoto.com/id/502789173/photo/light-bulb-concept.jpg?s=612x612&w=0&k=20&c=vJfSDuFJf_4UsQcUsdMNUfDkkNU6Bf9cTHF-n4-Zwvs=";
+            container.style.backgroundColor='grey';
+        }
+         image.style.display='block';
+    }
+        </script>    
+    </head>
+    <body>
+        <div id="container">
+            <h1>Select bulb</h1>
+            <button onclick="selectbulb('on')">ON</button>
+            <button onclick="selectbulb('off')">OFF</button>
+            <div id="imageContainer">
+                <img id="bulbImage" src="" alt="bulbImage">
+                
+            </div>
+        </div>
+    </body>
+</html>

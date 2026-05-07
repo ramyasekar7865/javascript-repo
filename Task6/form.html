@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>FORM</title>
+        <style>
+            h1{
+                font-family: 'Times New Roman', Times, serif;
+                text-decoration: underline;
+                color:blue;
+            }
+            body{
+                text-align: center;
+                margin-top:150px;
+                background-color: rgb(150, 230, 150);
+            }
+            #container{
+                display: inline-block;
+                background-color: aqua;
+                padding:30px;
+            }
+            label{
+                font-weight: bold;
+                font-size: 20px;
+               
+            }
+            input{
+                font-weight: bold;
+                font-size: 18px;
+                text-align: center;
+                border:3px solid brown;
+               box-shadow: 5px 5px 5px magenta;
+               border-radius: 10%;
+            }
+            input:hover{
+                background-color: orange;
+                color:blue;
+                transition:3s;
+            }
+            button{
+                background-color: pink;
+                color:red;
+                font-weight: bold;
+                font-size: 18px;
+            }
+           button:hover{
+             background-color: yellowgreen;
+                color:midnightblue;
+
+           }
+        </style>
+        <script>
+            function login(mode){
+                let name=document.getElementById('name').value;
+                let mail=document.getElementById('mail').value;
+                let pwd=document.getElementById('pwd').value;
+
+                if(mode==='light mode'){
+                    container.style.backgroundColor='yellow';
+                    container.style.color='purple';
+            }
+            else if(mode==='dark mode'){
+                container.style.backgroundColor='Black';
+                container.style.color='red';
+
+            }
+         
+        }
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <h1>LOGIN FORM</h1>
+            <label>Enter name:</label>
+            <input type="text" name="name" id="name"/><br><br>
+             <label>Gmail:</label>
+            <input type="text" name="mail" id="mail"/><br><br>
+            <label>Password:</label>
+            <input type="text" name="pwd" id="pwd"/><br><br>
+            <button onclick="login()">Login</button><br><br>
+           <button onclick="login('light mode')">Light mode</button>
+           <button onclick="login('dark mode')">Dark mode</button>
+         
+        </div>
+    </body>
+</html>

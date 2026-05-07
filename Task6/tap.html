@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Tap</title>
+        <style>
+             body{
+                text-align: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            h1{
+                color:red;
+                text-decoration: underline;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            #container{
+                display:inline-block;
+                background-color: blue;
+                padding:10px 20px;
+                margin:50px;
+        
+            }
+            #tapImage{
+
+                display:none;
+                padding:30px;
+                height:200px;
+                width:200px;
+            }
+            button{
+                color:magenta;
+                background-color: greenyellow;
+                padding:10px20px;
+                font-weight: bold;
+                margin:10px;
+                cursor: pointer;
+
+            }
+
+        </style>
+        <script>
+            function selecttap(tap){
+                let image=document.getElementById('tapImage');
+                let container=document.getElementById('container');
+
+                if(tap==='on'){
+                    image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyUkaVKsA529pnoMMKnog2JXE7kSstBoQC2g&s";
+                    container.style.backgroundColor='purple';
+                }
+                else if(tap==='off'){
+                    image.src="https://media.istockphoto.com/id/115902747/photo/hand-on-the-tap.jpg?s=612x612&w=0&k=20&c=6jkip1iy8jdjqMNYhwON6uP1BQkixxACnLoPL3bckI0=";
+                    container.style.backgroundColor='green';
+                }
+                image.style.display='block';
+            
+            }
+        
+        </script>
+    </head>
+    <body>
+        <div id="container">
+        <h1>TAP</h1>
+        <button onclick="selecttap('on')">ON</button>
+         <button onclick="selecttap('off')">OFF</button>
+         <div id="imagecontainer">
+            <img id="tapImage" src="" alt="tapImage"/>
+            </div>
+         </div>
+    </body>
+</html>
