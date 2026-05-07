@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Gender Selection
+        </title>
+
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding:50px;
+            }
+            #container{
+                padding:20px;
+                display:inline-block;
+                background-color: red;
+                border-radius:10px;
+                box-shadow:0 0 10px green;
+
+            }
+            #genderImage{
+                width:200px;
+                height:200px;
+                display:none;
+                margin-top:20px;
+                border-radius:50%;
+
+            }
+            button{
+                padding:10px 20px;
+                font-size: 16px;
+                cursor:pointer;
+                margin:10px;
+            }
+        </style>
+        <script>
+          function selectGender(gender) {
+            const image=document.getElementById('genderImage');
+        const container=document.getElementById('container');
+
+        if (gender==='male'){
+            image.src="https://img.freepik.com/free-photo/portrait-confident-young-businessman-with-his-arms-crossed_23-2148176206.jpg?semt=ais_hybrid&w=740&q=80";
+            container.style.backgroundColor='blue';
+
+        }else if (gender==='female'){
+            image.src="https://static.vecteezy.com/system/resources/thumbnails/038/962/461/small/ai-generated-caucasian-successful-confident-young-businesswoman-ceo-boss-bank-employee-worker-manager-with-arms-crossed-in-formal-wear-isolated-in-white-background-photo.jpg";
+            container.style.backgroundColor='pink';
+        }
+        image.style.display='block';
+    }
+        </script>    
+    </head>
+    <body>
+        <div id="container">
+            <h1>Select Gender</h1>
+            <button onclick="selectGender('male')">Male</button>
+            <button onclick="selectGender('female')">Female</button>
+            <div id="imageContainer">
+                <img id="genderImage" src="" alt="Gender Image">
+                
+            </div>
+        </div>
+    </body>
+</html>
