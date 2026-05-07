@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Operators</title>
+        <!-- let,var,const --keywords -->
+        <script>
+            let age=59;
+            // string operator
+            let x='abc';
+            let y='mno';
+            console.log(x+y);
+          
+            // logical operator
+            if((age>18)&&(age<56)){
+                console.log("Eligible");
+            }
+            else{
+                console.log("Ineligible");
+            }
+            // type operator
+            console.log(typeof(x));
+            // arithmatic , comparison operator
+            var a=3;
+            var b=5;
+            console.log(a+b);
+             console.log(a-b);
+              console.log(a*b);
+               console.log(a%b);
+            //    modulas
+                console.log(a/b);
+                // divide
+            console.log(a>b);
+               console.log(a<b);
+                  console.log(a>=b);
+                     console.log(a<=b);
+            console.log(a!=b);
+            // assignment operator
+            var m=7;
+            var n='7';
+            console.log(m==n);
+            console.log(m===n);
+
+            // conditional or control stmts
+            // decision making/branching
+            let num1=20;
+           // simple if
+            if(num1>18){
+                console.log("Eligible");
+            }
+            // if else
+                 if(num1>18){
+                console.log("Eligible");
+            }
+            else{
+                console.log("Ineligible");
+            }
+
+            // else if ladder
+             let num2=65;
+              if(num2<100 && num2>91){
+                console.log("A++");
+            }
+            else if(num2<90 && num2>81){
+                console.log("A+");
+            }
+            else if(num2<80 && num2>71){
+                console.log("B+");
+            }
+            else{
+                console.log("enter valid mark")
+            }
+
+            // nested if
+            let m1=15;
+    if(m1%3==0){
+        console.log(m1+ "divisible by 3")
+        if(m1%5==0){
+            console.log(m1+" divisible by both 3 and 5 ")
+        }
+    }
+    else{
+        console.log(m1+"not divisible by 3")
+    }
+    
+        </script>
+    </head>
+</html>
