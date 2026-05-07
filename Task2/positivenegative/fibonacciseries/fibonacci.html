@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fibonacci Series</title>
+        <script>
+            function fibonacci(){
+                // without array
+                let n=parseInt(document.getElementById('number').value);
+                let a=0;
+                let b=1;
+                let output="";
+                
+                if (n>=1)output+=a+" ";
+                 console.log(a);
+                 if(n>=2)output+=b+" ";
+                 console.log(b);
+
+                for( let i=3;i<=n; i++){
+                    let c=a+b;
+                    output+=c+" ";
+                     console.log(c);
+                    a=b;
+                    b=c;
+                }
+                 document.getElementById('result').innerHTML= output;
+            }
+
+
+                // using array
+            //      let fib=[0,1];
+            //     if (n<=0){
+            //   document.getElementById('result').innerHTML= "Enter valid number";
+
+            //     }else if (n===1){
+            //   document.getElementById('result').innerHTML= "number is 1";
+
+            //     }
+               
+            //     for(let i=2;i<n;i++){
+            //         fib[i]=fib[i-1]+[i-2]
+            //         console.log(fib)
+            //      document.getElementById('result').innerHTML= " series of "+ n + " is "+ fib;
+
+            //     }
+
+            // } 
+
+
+        </script>
+    </head>
+    <body>
+        <h1>Fibonacci Series</h1>
+        <input type="number" name="number" id="number" placeholder="Enter a number"/><br><br>
+        <button onclick="fibonacci()">Check</button>
+        <p id="result"></p>
+    </body>
+</html>
