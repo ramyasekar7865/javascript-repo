@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left pyramid</title>
+    <script>
+        function pyramid(){
+        let rows = parseInt(document.getElementById("row").value);
+        let symbol = document.getElementById("symbol").value;
+
+for (let i = 1; i <= rows; i++) {       // outer loop
+  let row = "";
+
+  for (let j = 1; j <= i; j++) {       // inner loop
+    row += symbol;
+  }
+
+  console.log(row);
+}
+document.getElementById('result').innerHTML="no of row "+rows;
+        }
+    </script>
+</head>
+<body>
+    <label >Enter Row Count</label>
+    <input type="number" name="row" id="row"/>
+    <label >Enter Symbol to be printed</label>
+    <input type="text" name="symbol" id="symbol"/>
+    <button onclick="pyramid()">Create Pyramid</button>
+    <p id="result"></p>
+</body>
+</html>

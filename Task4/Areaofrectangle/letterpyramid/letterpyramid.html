@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Letter Pyramid </title>
+        <script>
+            function letterpyramid(){
+                let rows=parseInt(document.getElementById('row').value);
+                let symbols=document.getElementById('symbol').value;
+                let output ="";
+                for (let i=1; i<=rows; i++){
+                    let line="";
+                for(let j=1; j<=rows; j++){
+                    if(
+                        j===1||
+                        j===rows||
+                       ( i===j&&i<=rows/2)||
+                       (i+j===rows+1 && i<=rows/2)
+                     ){
+                        line+=symbols;
+                     }else{
+                        line+=" ";
+                        
+                     }
+                     }    
+                     output += line+'\n';
+                    }
+                    console.log(output)
+                   document.getElementById('result').innerHTML=output;
+            }
+         
+
+        </script>
+    </head>
+    <body>
+        <h1>Letter Pyramid</h1>
+        <label>Enter row count:</label>
+        <input type="number" name="row" id="row"/>
+        <label>Enter Symbol to be printed</label>
+        <input type="text" name="symbol" id="symbol"/>
+        <button onclick="letterpyramid()">Create Letter Pyramid</button>
+        <p id="result"></p>
+    </body>
+</html>
