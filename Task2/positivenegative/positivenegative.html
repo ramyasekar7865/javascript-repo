@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Positivenegative</title>
+        <link rel="stylesheet" href="positivenegative.css"/>
+        <script>
+            function PositiveNegative(){
+                let number=document.getElementById('number').value;
+                number=parseFloat(number);
+                if( number<0){
+                    document.getElementById('result').innerHTML= number + "is Negative";
+                }else if (number>0){
+                     document.getElementById('result').innerHTML= number +" is Positive";
+                }
+                else{
+                    document.getElementById('result').innerHTML= " Its Zero";
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>PositiveNegative</h1>
+        <input type="number" name="number" id="number" placeholder="Enter a number"/><br><br>
+        <button onclick="PositiveNegative()">Check</button>
+        <div class="res">
+        <p id="result"></p>
+        </div>
+    </body>
+</html>
