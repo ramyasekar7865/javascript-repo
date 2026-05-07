@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Area of Rectangle</title>
+        <style>
+            body{
+                background-image: linear-gradient(skyblue,yellow,pink);
+                text-align: center;
+                margin-top:150px;
+            }
+            h1{
+                text-decoration: underline;
+            }
+            label{
+                color:blue;
+                background-color:pink;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            input{
+                color:blueviolet;
+                background-color: azure;
+                font-weight: bold;
+                font-size: 18px;
+                text-align: center;
+            }
+            .res{
+                color:red;
+                background-color: rgb(24, 52, 174);
+                font-weight: bold;
+                font-size: 18px;
+
+            }
+            button{
+                color:black;
+                background-color: aqua;
+                font-size: 18px;
+                font-weight: bold;
+                font-style: italic;
+            }
+            button:hover{
+                color:blue;
+                background-color: rgb(240, 112, 112);
+            }
+        </style>
+        <script>
+            function areaofrec(){
+                let l=document.getElementById('length').value;
+                let b=document.getElementById('breadth').value;
+                let result=l*b;
+                document.getElementById('result').innerHTML=" Area of Rectangle is " + result;
+
+            }
+        
+        </script>
+    </head>
+    <body>
+        <h1>Area Of Rectangle</h1>
+        <label>Enter length: </label>
+        <input type="number" name="length" id="length"/><br><br>
+        <label>Enter Breadth: </label>
+        <input type="number" name="Breadth" id="breadth"/><br><br>
+        <button onclick="areaofrec()">Area</button>
+        <div class="res">
+        <p id="result"></p>
+        </div>
+    </body>
+</html>
